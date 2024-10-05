@@ -8,8 +8,8 @@ import { User } from '../interfaces/user.interface';
 })
 export class UserService {
 
-  /* apiUrl = 'http://3.133.145.220:8080/sistema-marcaje-backend/usuarios'; */
-    apiUrl = 'http://localhost:8080/usuarios'
+    /* apiUrl = 'http://localhost:8080/usuarios' */
+    apiUrl = 'http://18.219.196.79:8080/usuarios'
 
 
   constructor(private http: HttpClient) { }

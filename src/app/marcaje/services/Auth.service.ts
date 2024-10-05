@@ -8,6 +8,7 @@ import { User } from '../interfaces/user.interface';
   providedIn: 'root'
 })
 export class AuthService {
+  /* private apiUrl = 'http://18.219.196.79:8080/api/auth'; */
   private apiUrl = 'http://localhost:8080/api/auth';
   private token: string | null = null;
 

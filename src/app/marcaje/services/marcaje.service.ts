@@ -8,8 +8,8 @@ import { Observable } from 'rxjs';
 })
 export class MarcajeService {
 
-  /* private apiUrl = 'http://3.133.145.220:8080/sistema-marcaje-backend/marcajes' */
-  private apiUrl = 'http://localhost:8080/marcajes'
+  /* private apiUrl = 'http://localhost:8080/marcajes' */
+  private apiUrl = 'http://18.219.196.79:8080/marcajes'
 
 
   constructor(private http : HttpClient) { }
