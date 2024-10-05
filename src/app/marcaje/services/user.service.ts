@@ -9,7 +9,7 @@ import { User } from '../interfaces/user.interface';
 export class UserService {
 
     /* apiUrl = 'http://localhost:8080/usuarios' */
-    apiUrl = 'http://18.219.196.79:8080/usuarios'
+    apiUrl = 'http://18.219.196.79:8080/sistema-marcaje-jwt/usuarios'
 
 
   constructor(private http: HttpClient) { }
