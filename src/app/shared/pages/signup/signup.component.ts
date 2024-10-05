@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { User } from 'src/app/marcaje/interfaces/user.interface';
+import { AuthService } from 'src/app/marcaje/services/Auth.service';
 import { UserService } from 'src/app/marcaje/services/user.service';
 import swal from 'sweetalert2';
 
@@ -24,14 +25,14 @@ export class SignupComponent {
   alertMessage: string | null = null;
   alertClass: string = '';
     
-  constructor(private userService: UserService, private router: Router){}
+  constructor(private authService: AuthService, private router: Router){}
 
   formSubmit() {
     if (this.user.nombre && this.user.apellido && this.user.email && this.user.telefono && this.user.username && this.user.password) {
-      this.userService.addUser(this.user).subscribe(
+      this.authService.addUser(this.user).subscribe(
         (response) => {
           swal.fire('Registro de usuario correcto.', '¡Usuario Agregado!', 'success');
-          this.router.navigate(['/user/listaUsuarios']);
+          this.router.navigate(['/marcajes/listaUsuarios']);
         },
         (error) => {
           this.showAlert('Nombre de usuario o contraseña incorrectos.', 'alert-danger');
